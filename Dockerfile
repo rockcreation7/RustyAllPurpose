@@ -5,5 +5,5 @@ RUN cargo install --path .
 
 FROM debian:bullseye-slim
 RUN apt-get update && rm -rf /var/lib/apt/lists/*
-COPY --from=builder /usr/local/cargo/bin/RustyAllPurpose /usr/local/bin/RustyAllPurpose
+COPY --from=builder /usr/local/cargo/bin/all_purpose /usr/local/bin/all_purpose
 CMD ["all_purpose"]
